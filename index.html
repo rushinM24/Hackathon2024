@@ -8,18 +8,34 @@
 <body>
     <input type="text" id="keywordJson" style="width:320px;">
     <br>
-    <input type="button" value="Submit" id="keywordSubmitBtn">
+    <input type="button" value="Food" id="foodKeywordSubmitBtn">
+    <input type="button" value="Automotive" id="automotiveKeywordSubmitBtn">
+    <input type="button" value="Sport" id="sportKeywordSubmitBtn">
 
     <script>
         'use strict';
 
         const keywordJson = document.getElementById('keywordJson');
-        const keywordSubmitBtn = document.getElementById('keywordSubmitBtn');
+        const foodKeywordSubmitBtn = document.getElementById('foodKeywordSubmitBtn');
+        const automotiveKeywordSubmitBtn = document.getElementById('automotiveKeywordSubmitBtn');
+        const sportKeywordSubmitBtn = document.getElementById('sportKeywordSubmitBtn');
 
-        keywordSubmitBtn.addEventListener('click', () => {
-
+        foodKeywordSubmitBtn.addEventListener('click', () => {
             localStorage.setItem('keywords',  keywordJson.value);
 
+            window.location.href = 'https://rushinm24.github.io/Hackathon2024/food';
+        });
+
+        automotiveKeywordSubmitBtn.addEventListener('click', () => {
+            localStorage.setItem('keywords',  keywordJson.value);
+
+            window.location.href = 'https://rushinm24.github.io/Hackathon2024/automotive';
+        });
+
+        sportKeywordSubmitBtn.addEventListener('click', () => {
+            localStorage.setItem('keywords',  keywordJson.value);
+
+            window.location.href = 'https://rushinm24.github.io/Hackathon2024/sport';
         });
     </script>
 </body>

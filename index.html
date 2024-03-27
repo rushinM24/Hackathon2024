@@ -21,18 +21,22 @@
         const sportKeywordSubmitBtn = document.getElementById('sportKeywordSubmitBtn');
 
         foodKeywordSubmitBtn.addEventListener('click', () => {
+            localStorage.removeItem('keywords');
             localStorage.setItem('keywords',  keywordJson.value);
 
             window.location.href = 'https://rushinm24.github.io/Hackathon2024/food';
         });
 
         automotiveKeywordSubmitBtn.addEventListener('click', () => {
+            localStorage.removeItem('keywords');
+
             localStorage.setItem('keywords',  keywordJson.value);
 
             window.location.href = 'https://rushinm24.github.io/Hackathon2024/automotive';
         });
 
         sportKeywordSubmitBtn.addEventListener('click', () => {
+            localStorage.removeItem('keywords');
             localStorage.setItem('keywords',  keywordJson.value);
 
             window.location.href = 'https://rushinm24.github.io/Hackathon2024/sport';

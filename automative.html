@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food | DyslexAI</title>
+
+    <!-- Start GPT Tag -->
+    <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+
+    <script>
+        const inContextKWAsJson = JSON.parse(localStorage.getItem("keywords")).in_context_kw;
+        const outContextKWAsJson = JSON.parse(localStorage.getItem("keywords")).out_context_kw;
+
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+            googletag.defineSlot('/8900/24.com/web/news24/test/tech', [[728,90]], 'div-gpt-ad-3616206-1')
+                    .setTargeting('in_context_kw', inContextKWAsJson)
+                    .setTargeting('out_context_kw', outContextKWAsJson)    
+                    .addService(googletag.pubads());
+
+            googletag.defineSlot('/8900/24.com/web/news24/test/tech', [[300,600]], 'div-gpt-ad-3616206-2')
+                    .setTargeting('in_context_kw', inContextKWAsJson)
+                    .setTargeting('out_context_kw', outContextKWAsJson)    
+                    .addService(googletag.pubads());
+
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.pubads().setCentering(true);
+            googletag.enableServices();
+        });
+    </script>
+    <!-- End GPT Tag -->
+</head>
+<body style='margin:0;padding:0;'>
+    <img src="./automative.png" alt="food" style="width:100%">
+    
+    <div id='div-gpt-ad-3616206-1' style="left:16.7rem;position:absolute;scale:75%;top:10.12rem;width:fit-content;">
+        <script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-3616206-1'); });</script>
+    </div>
+
+    <div id='div-gpt-ad-3616206-2' style="position:absolute;right:14.35rem;scale:75%;top:27.7rem;width:fit-content;">
+        <script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-3616206-2'); });</script>
+    </div>
+</body>
+</html>

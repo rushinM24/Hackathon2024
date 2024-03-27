@@ -12,6 +12,9 @@
         const inContextKWAsJson = JSON.parse(localStorage.getItem("inContextKW").in_context_kw);
         const outContextKWAsJson = JSON.parse(localStorage.getItem("outContextKW").out_context_kw);
 
+        console.log(inContextKWAsJson);
+        console.log(outContextKWAsJson);
+
         window.googletag = window.googletag || {cmd: []};
         googletag.cmd.push(function() {
             googletag.defineSlot('/8900/24.com/web/news24/test/tech', [[300,600], [728,90]], 'div-gpt-ad-3616206-1')

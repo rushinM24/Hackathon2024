@@ -1,42 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DyslexAI</title>
-</head>
-<body>
-    <input type="text" id="keywordJson" style="width:320px;">
-    <br>
-    <input type="button" value="Food" id="foodKeywordSubmitBtn">
-    <input type="button" value="Automotive" id="automotiveKeywordSubmitBtn">
-    <input type="button" value="Sport" id="sportKeywordSubmitBtn">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DyslexAI</title>
+        <style>
+            #keywordJson {
+                border:1px solid rgb(217,217,217);
+                border-radius:25px;
+                padding:5px 10px;
+                width:320px;
+            }
+            #keywordJson:focus-visible {
+                outline: none;
+            }
+        </style>
+    </head>
+    <body style="text-align: center;">
+        <input type="text" id="keywordJson">
+        <br>
+        <br>
+        <input type="button" value="Food" id="foodKeywordSubmitBtn">
+        <input type="button" value="Automotive" id="automotiveKeywordSubmitBtn">
+        <input type="button" value="Sport" id="sportKeywordSubmitBtn">
 
-    <script>
-        'use strict';
+        <script>
+            'use strict';
 
-        const keywordJson = document.getElementById('keywordJson');
-        const foodKeywordSubmitBtn = document.getElementById('foodKeywordSubmitBtn');
-        const automotiveKeywordSubmitBtn = document.getElementById('automotiveKeywordSubmitBtn');
-        const sportKeywordSubmitBtn = document.getElementById('sportKeywordSubmitBtn');
+            const keywordJson = document.getElementById('keywordJson');
+            const foodKeywordSubmitBtn = document.getElementById('foodKeywordSubmitBtn');
+            const automotiveKeywordSubmitBtn = document.getElementById('automotiveKeywordSubmitBtn');
+            const sportKeywordSubmitBtn = document.getElementById('sportKeywordSubmitBtn');
 
-        foodKeywordSubmitBtn.addEventListener('click', () => {
-            localStorage.setItem('keywords',  keywordJson.value);
+            foodKeywordSubmitBtn.addEventListener('click', () => {
+                localStorage.removeItem('keywords');
+                localStorage.setItem('keywords',  keywordJson.value);
 
-            window.location.href = 'https://rushinm24.github.io/Hackathon2024/food';
-        });
+                window.location.href = 'https://rushinm24.github.io/Hackathon2024/food';
+            });
 
-        automotiveKeywordSubmitBtn.addEventListener('click', () => {
-            localStorage.setItem('keywords',  keywordJson.value);
+            automotiveKeywordSubmitBtn.addEventListener('click', () => {
+                localStorage.removeItem('keywords');
 
-            window.location.href = 'https://rushinm24.github.io/Hackathon2024/automotive';
-        });
+                localStorage.setItem('keywords',  keywordJson.value);
 
-        sportKeywordSubmitBtn.addEventListener('click', () => {
-            localStorage.setItem('keywords',  keywordJson.value);
+                window.location.href = 'https://rushinm24.github.io/Hackathon2024/automotive';
+            });
 
-            window.location.href = 'https://rushinm24.github.io/Hackathon2024/sport';
-        });
-    </script>
-</body>
-</html>
+            sportKeywordSubmitBtn.addEventListener('click', () => {
+                localStorage.removeItem('keywords');
+                localStorage.setItem('keywords',  keywordJson.value);
+
+                window.location.href = 'https://rushinm24.github.io/Hackathon2024/sport';
+            });
+        </script>
+    </body>
+    </html>
